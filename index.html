@@ -12,15 +12,16 @@
   <meta name="theme-color" content="#ffffff">
   <meta http-equiv=" Content-Type" content="text/html;charset=utf-8" />
 
-  <title>SPEC_TITLE</title>
-  <h2 id="subtitle">SPEC_SUBTITLE</h2>
+  <title>Policies and Architecture</title>
+  <h2 id="subtitle">v1.0.0</h2>
   
   <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
   <script type="text/javascript" class="remove">
     var respecConfig = {
       specStatus: 'base',
       shortName: 'SPEC_SHORT_NAME',
-      publishDate: "PUBLISH_DATE",
+      publishDate: "2022-03-10",
+      latestVersion: "https://open-credentialing-initiative.github.io/policies-and-architecture/",
       license: 'w3c-software-doc',
       logos: [],
       lint: {
@@ -29,13 +30,13 @@
       },
       editors: [
         {
-          name: 'YOUR_NAME',
-          url: 'YOUR_WEBSITE',
-          company: 'YOUR_COMPANY',
-          companyURL: 'YOUR_COMPANY_WEBSITE',
+          name: 'Lauritz Leifermann',
+          url: 'https://spherity.com',
+          company: 'Spherity GmbH',
+          companyURL: 'https://spherity.com',
         },
       ],
-      github: "REPO_LINK",
+      github: "https://github.com/Open-Credentialing-Initiative/policies-and-architecture",
       logos: [
         {
           src: "https://avatars.githubusercontent.com/u/79323216?s=200&v=4",
@@ -72,7 +73,8 @@
 
 <body>
   <p class="copyright"> Copyright © 2021 Open Credentialing Initiative.</p>
-  <section id="sotd">
+  <section>
+    <h2>Status of this Document</h2>
     <p>
       This section describes the status of this document at the
       time of its publication. Other documents may supersede this
@@ -91,17 +93,102 @@
   </section>
   <section id="abstract">
     <p>
-      The abstract section.
+      This specification encapsulates all OCI Policies and Architecture Decisions, built around external and internal collaboration. 
+      For Contribution Agreements please visist <a href="https://open-credentialing-initiative.github.io/contribution-agreement/">Contribution Agreement</a>.
     </p>
   </section>
   <section>
-    <h2>An example section</h2>
-    <p>Some text.</p>
-  </section>
-  <section>
-    <h2>Another example section</h2>
-    <p>Some text.</p>
-  </section>
+    <h2>Versioning of OCI Specifications and Documents</h2>
+    <p>
+      In order to ensure that external and internal stakeholders, which rely on the OCI framework and its surrounding documents, 
+      are not interupted or broken when the OCI releases new versions of its ecosystem, this policy describes how the OCI manages versions and releases of its documents. 
+    </p>
+    <section>
+      <h2>Scope</h2>
+      <p>
+        The OCI manages versions of its releases on two different levels. These include:
+        <ul>
+          <li>Versioning on a <b>repository</b> basis</li>
+          <li>Versioning on a <b>file</b> basis</li>
+        </ul> 
+        <p>
+          Versioning on a <b>repository</b> basis may occur when a group of semantically connected documents are published by the OCI. 
+          Changes in versions in a repository are always reflected via Releases found in the corresponding repository on github. For example: <a href="https://github.com/Open-Credentialing-Initiative/schemas/releases">https://github.com/Open-Credentialing-Initiative/schemas/releases</a>.
+        </p>
+        <p>
+          Versioning on a <b>file</b> basis may occur when external stakeholders are directly consuming a file published by the OCI. This is often 
+          the case on <b>json-ld schemas, open-api specifications or other programatically requested ressources</b>. This is done to avoid breaking existing integrations and dependencies which directly consume these files. 
+          Any updates made to them mean that stakeholders have to concsiously update a link to a file in order to increment their version as well.
+        </p>
+      </p>
+    </section>
+    <section id="conformance">
+      <h2>Keywords</h2>
+      <p>
+        The following keywords indicate the precedence and general rigidity of
+        a given conformance criterion, and are to be interpreted as:
+      </p>
+      <li>
+        <b>MUST</b> and <b>MUST NOT</b> indicate strict requirements from which no
+        deviation is permitted.
+      </li>
+      <li>
+        <b>SHOULD</b> and <b>SHOULD NOT</b> indicate preferred approaches; among several
+        possibilities one is recommended as particularly suitable, without
+        mentioning or excluding others, but is not necessarily required, or
+        that (in the negative form) a certain course of action is discouraged
+        but not prohibited.
+      </li>
+      <li>
+        <b>MAY</b> and <b>NEED NOT</b> indicate possible and permissible approaches that are
+        not necessarily preferred.
+      </li>
+      <li>
+        <b>CAN</b> and <b>CANNOT</b> indicate a capability, whether material, physical or
+        causal or, in the negative, the absence of that capability.
+      </li>
+      Keywords appear in <b>bold</b> and <b>ALL CAPS</b> in the Conformance Criteria. The key words <i>MAY</i>,
+      <i>RECOMMENDED</i>, <i>REQUIRED</i>,
+      <i>OPTIONAL</i>, <i>SHALL</i>, <i>SHALL NOT</i>, <i>SHOULD</i>, and <i>SHOULD NOT</i> in this document are to be
+      interpreted as described in BCP 14
+      [[RFC2119]] [[RFC8174]] when, and only when, they appear in all capitals.
+    </section>    
+    <section>
+      <h2>Semantic Versioning</h2>
+      <p>
+        In order to version published work the OCI faciliates a well established and known versioning mechanims <a href="https://semver.org/">Semantic Versioning</a>.
+      </p>
+      <p>Versioning in the OCI is largely borrowed from the Semantic Versioning approach. The core principles are:</p>
+      <ul>
+        <li>Each document in the OCI <b>MUST</b> declare a semantic version</li>
+        <li>A version number <b>MUST</b> take the form X.Y.Z where X, Y, and Z are non-negative integers, and <b>MUST NOT</b> contain leading zeroes. X is the major version, Y is the minor version, and Z is the patch version. Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.</li>
+        <li>Once a versioned package has been released, the contents of that version <b>MUST NOT</b> be modified. Any modifications <b>MUST</b> be released as a new version.</li>
+      </ul>
+      <p>Changes in version have to adhere to the following guideline:</p>
+      <ul>
+        <li><b>MAJOR (X)</b> version whenincompatible changes are made.</li>
+        <li><b>MINOR (Y)</b> version changes are made in a backwards compatible manner.</li>
+        <li><b>FIX (Z)</b> version when backwards compatible fixes are made.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Interoperability Profiles</h2>
+      <p>
+        To ensure that OCI versioned documents remain interoperable a larger entity called <b>Interoperability Profile</b> is leveraged.
+        An Interoperability Profile encapsulates multiple OCI versioned documents to ensure ease of use OCI users, integrators and stakeholders. 
+        As an integrator one can only to rely on the versioning of interoperability profiles instead of manually mananging multiple different OCI documents.   
+      </p>
+      <p>
+        Increases in single OCI documents will be reflected in appropiate version changes in the connected OCI interoperability profile.
+      </p>
+      <figure id="figure">
+        <img src="assets/interop-profile.png" alt="OCI Architecture Change Process" style="width: 100%; height: 100%;" />
+        <figcaption>
+          Example: an updated version in one of the conformance documents increments up to a new Interoperability Profile version. In this case, minor release increments up by 1.
+        </figcaption>
+      </figure>
+    </section>
+  </section>  
 </body>
 
 </html>
