@@ -1,4 +1,4 @@
-# OCI Policies and Architecture
+# OCI Policies and Architecture 
 ## 🤝 Contributing
 
 Contributions, issue and pull-requests are welcome!
