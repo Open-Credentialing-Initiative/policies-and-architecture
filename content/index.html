@@ -95,7 +95,7 @@
     <p>
       This specification encapsulates all OCI Policies and Architecture Decisions, built around external and internal
       collaboration.
-      For Contribution Agreements please visist <a
+      For Contribution Agreements, please visit <a
         href="https://open-credentialing-initiative.github.io/contribution-agreement/">Contribution Agreement</a>.
     </p>
   </section>
@@ -111,7 +111,7 @@
     </li>
     <li>
       <b>SHOULD</b> and <b>SHOULD NOT</b> indicate preferred approaches; among several
-      possibilities one is recommended as particularly suitable, without
+      possibilities, one is recommended as particularly suitable without
       mentioning or excluding others, but is not necessarily required, or
       that (in the negative form) a certain course of action is discouraged
       but not prohibited.
@@ -124,7 +124,7 @@
       <b>CAN</b> and <b>CANNOT</b> indicate a capability, whether material, physical or
       causal or, in the negative, the absence of that capability.
     </li>
-    Keywords appear in <b>bold</b> and <b>ALL CAPS</b> in the Conformance Criteria. The key words <i>MAY</i>,
+    Keywords appear in <b>bold</b> and <b>ALL CAPS</b> in the Conformance Criteria. The keywords <i>MAY</i>,
     <i>RECOMMENDED</i>, <i>REQUIRED</i>,
     <i>OPTIONAL</i>, <i>SHALL</i>, <i>SHALL NOT</i>, <i>SHOULD</i>, and <i>SHOULD NOT</i> in this document are to be
     interpreted as described in BCP 14
@@ -135,7 +135,7 @@
     <p>
       In order to ensure that external and internal stakeholders, which rely on the OCI framework and its surrounding
       documents,
-      are not interupted or broken when the OCI releases new versions of its ecosystem, this policy describes how the
+      are not interrupted or broken when the OCI releases new versions of its ecosystem, this policy describes how the
       OCI manages versions and releases of its documents.
     </p>
     <section>
@@ -150,15 +150,15 @@
         Versioning on a <b>repository</b> basis may occur when a group of semantically connected documents are published
         by the OCI.
         Changes in versions in a repository are always reflected via Releases found in the corresponding repository on
-        github. For example: <a
+        GitHub. For example: <a
           href="https://github.com/Open-Credentialing-Initiative/schemas/releases">https://github.com/Open-Credentialing-Initiative/schemas/releases</a>.
       </p>
       <p>
         Versioning on a <b>file</b> basis may occur when external stakeholders are directly consuming a file published
         by the OCI. This is often
-        the case on <b>json-ld schemas, open-api specifications or other programatically requested ressources</b>. This
+        the case on <b>json-ld schemas, open-api specifications or other programmatically requested resources</b>. This
         is done to avoid breaking existing integrations and dependencies which directly consume these files.
-        Any updates made to them mean that stakeholders have to concsiously update a link to a file in order to
+        Any updates made to them mean that stakeholders have to consciously update a link to a file in order to
         increment their version as well.
       </p>
       </p>
@@ -166,21 +166,21 @@
     <section>
       <h2>Semantic Versioning</h2>
       <p>
-        In order to version published work the OCI faciliates a well established and known versioning mechanims <a
+        In order to version published work, the OCI facilitates a well established and known versioning mechanism: <a
           href="https://semver.org/">Semantic Versioning</a>.
       </p>
       <p>Versioning in the OCI is largely borrowed from the Semantic Versioning approach. The core principles are:</p>
       <ul>
-        <li>Each document in the OCI <b>MUST</b> declare a semantic version</li>
+        <li>Each document in the OCI <b>MUST</b> declare a semantic version.</li>
         <li>A version number <b>MUST</b> take the form X.Y.Z where X, Y, and Z are non-negative integers, and <b>MUST
             NOT</b> contain leading zeroes. X is the major version, Y is the minor version, and Z is the patch version.
-          Each element MUST increase numerically. For instance: 1.9.0 -> 1.10.0 -> 1.11.0.</li>
+          Each element MUST increase numerically. For instance: 1.9.0 → 1.10.0 → 1.11.0.</li>
         <li>Once a versioned package has been released, the contents of that version <b>MUST NOT</b> be modified. Any
           modifications <b>MUST</b> be released as a new version.</li>
       </ul>
       <p>Changes in version have to adhere to the following guideline:</p>
       <ul>
-        <li><b>MAJOR (X)</b> version whenincompatible changes are made.</li>
+        <li><b>MAJOR (X)</b> version when incompatible changes are made.</li>
         <li><b>MINOR (Y)</b> version changes are made in a backwards compatible manner.</li>
         <li><b>FIX (Z)</b> version when backwards compatible fixes are made.</li>
       </ul>
@@ -188,15 +188,15 @@
     <section>
       <h2>Interoperability Profiles</h2>
       <p>
-        To ensure that OCI versioned documents remain interoperable a larger entity called <b>Interoperability
+        To ensure that OCI versioned documents remain interoperable, a larger entity called <b>Interoperability
           Profile</b> is leveraged.
-        An Interoperability Profile encapsulates multiple OCI versioned documents to ensure ease of use OCI users,
-        integrators and stakeholders.
-        As an integrator one can only to rely on the versioning of interoperability profiles instead of manually
-        mananging multiple different OCI documents.
+        An Interoperability Profile encapsulates multiple OCI versioned documents to ensure ease of use for OCI users,
+        integrators, and stakeholders.
+        As an integrator, one can only to rely on the versioning of interoperability profiles instead of manually
+        managing multiple different OCI documents.
       </p>
       <p>
-        Increases in single OCI documents will be reflected in appropiate version changes in the connected OCI
+        Increases in single OCI documents will be reflected in appropriate version changes in the connected OCI
         interoperability profile.
       </p>
       <figure id="figure">
