@@ -96,7 +96,7 @@
       This specification describes the requirements for all OCI Policy and Architecture documentation created through external and internal
       collaboration.
       The contribution process is described elsewhere. Please visit <a
-        href="https://open-credentialing-initiative.github.io/contribution-agreement/">Contribution Agreement</a>.
+        href="https://open-credentialing-initiative.github.io/contribution-agreement/">Contribution Process</a>.
     </p>
   </section>
   <section id="conformance">
@@ -133,30 +133,27 @@
   <section>
     <h2>Versioning of OCI Specifications and Documents</h2>
     <p>
-      In order to ensure that external and internal stakeholders, which rely on the OCI framework and its surrounding
-      documents,
-      are not interrupted or broken when the OCI releases new versions of its ecosystem, this policy describes how the
-      OCI manages versions and releases of its documents.
+      Various conformance and technical specifications created by OCI rely on each other. Hence, changes to any of such documentation must be managed with care to prevent lack of clarity, failure of services to interoperate or any other consequential disruption to services provided or consumed by external and internal stakeholders who rely on the OCI framework. This policy describes how OCI manages versions and releases of its conformance and technical documentation.
     </p>
     <section>
       <h2>Scope</h2>
       <p>
-        The OCI manages versions of its releases on two different levels. These include:
+        OCI manages versions of its releases at the following two levels:
       <ul>
         <li>Versioning on a <b>repository</b> basis</li>
         <li>Versioning on a <b>file</b> basis</li>
       </ul>
       <p>
-        Versioning on a <b>repository</b> basis may occur when a group of semantically connected documents are published
-        by the OCI.
+        Versioning on a <b>repository</b> basis may occur when a group of semantically connected documents is published
+        by OCI.
         Changes in versions in a repository are always reflected via Releases found in the corresponding repository on
         GitHub. For example: <a
           href="https://github.com/Open-Credentialing-Initiative/schemas/releases">https://github.com/Open-Credentialing-Initiative/schemas/releases</a>.
       </p>
       <p>
-        Versioning on a <b>file</b> basis may occur when external stakeholders are directly consuming a file published
-        by the OCI. This is often
-        the case on <b>json-ld schemas, open-api specifications or other programmatically requested resources</b>. This
+        Versioning on a <b>file</b> basis may occur when stakeholders directly consume a file published
+        by OCI. This is often
+        the case with <b>json-ld schemas, open-api specifications or other programmatically required resources</b>. This
         is done to avoid breaking existing integrations and dependencies which directly consume these files.
         Any updates made to them mean that stakeholders have to consciously update a link to a file in order to
         increment their version as well.
@@ -166,15 +163,16 @@
     <section>
       <h2>Semantic Versioning</h2>
       <p>
-        In order to version published work, the OCI facilitates a well established and known versioning mechanism: <a
+        In order to version published work, OCI utilizes a well-established and known versioning mechanism: <a
           href="https://semver.org/">Semantic Versioning</a>.
       </p>
-      <p>Versioning in the OCI is largely borrowed from the Semantic Versioning approach. The core principles are:</p>
+      <p>Versioning in OCI is largely borrowed from the Semantic Versioning approach. 
+        <br>The core principles are:</p>
       <ul>
-        <li>Each document in the OCI <b>MUST</b> declare a semantic version.</li>
+        <li>Each document in OCI <b>MUST</b> declare a semantic version.</li>
         <li>A version number <b>MUST</b> take the form X.Y.Z where X, Y, and Z are non-negative integers, and <b>MUST
             NOT</b> contain leading zeroes. X is the major version, Y is the minor version, and Z is the patch version.
-          Each element MUST increase numerically. For instance: 1.9.0 → 1.10.0 → 1.11.0.</li>
+          Each element <b>MUST</b> increase numerically. For instance: 1.9.0 → 1.10.0 → 1.11.0.</li>
         <li>Once a versioned package has been released, the contents of that version <b>MUST NOT</b> be modified. Any
           modifications <b>MUST</b> be released as a new version.</li>
       </ul>
@@ -188,12 +186,9 @@
     <section>
       <h2>Interoperability Profiles</h2>
       <p>
-        To ensure that OCI versioned documents remain interoperable, a larger entity called <b>Interoperability
-          Profile</b> is leveraged.
-        An Interoperability Profile encapsulates multiple OCI versioned documents to ensure ease of use for OCI users,
-        integrators, and stakeholders.
-        As an integrator, one can only to rely on the versioning of interoperability profiles instead of manually
-        managing multiple different OCI documents.
+        To ensure that defined sets of OCI-versioned documents remain interoperable, these must be adjusted and reviewed in lockstep. To this end an overarching entity, called <b>Interoperability Profile</b>, is leveraged.
+        An Interoperability Profile encapsulates multiple OCI-versioned documents that directly relate to each other or functionally rely on each other.
+        An integrator <b>MUST</b> observe the versioning of the complete interoperability profile instead of manually choosing which document versions within such a set to implement.
       </p>
       <p>
         Increases in single OCI documents will be reflected in appropriate version changes in the connected OCI
@@ -203,8 +198,8 @@
         <img src="assets/interop-profile.png" alt="OCI Architecture Change Process"
           style="width: 100%; height: 100%;" />
         <figcaption>
-          Example: an updated version in one of the conformance documents increments up to a new Interoperability
-          Profile version. In this case, minor release increments up by 1.
+          Example: An updated version in one of the conformance documents results in an incremental increase of the Interoperability
+          Profile version, effectively creating a new Interoperability Profile; here a MINOR release increment by 1.
         </figcaption>
       </figure>
     </section>
